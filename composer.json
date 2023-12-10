@@ -1,5 +1,5 @@
 {
-    "name": "open-admin-ext/media-player",
+    "name": "eonlab/media-player",
     "description": "Intergrates mediaelement into open-admin",
     "type": "library",
     "keywords": ["open-admin", "extension", "audio", "video", "player"],
