@@ -3,7 +3,7 @@
     "description": "Intergrates mediaelement into open-admin",
     "type": "library",
     "keywords": ["open-admin", "extension", "audio", "video", "player"],
-    "homepage": "https://github.com/open-admin-ext/media-player",
+    "homepage": "https://github.com/eonlab/media-player",
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "open-admin-org/open-admin": "~1.0",
+        "open-admin-org/open-admin": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0"
