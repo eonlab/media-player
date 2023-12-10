@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\MediaPlayer;
+namespace OpenAdmin\Admin\MediaPlayer;
 
-use Encore\Admin\Admin;
+use OpenAdmin\Admin\Admin;
 use Illuminate\Support\Arr;
 
 class PlayerColumn
@@ -10,7 +10,7 @@ class PlayerColumn
     public function setupScript($options = [])
     {
         $options = array_merge([
-            'pluginPath'       => '/vendor/laravel-admin-ext/media-player/build',
+            'pluginPath'       => '/vendor/open-admin-ext/media-player/build',
             'shimScriptAccess' => 'always',
             'videoWidth'       => 1280,
             'videoHeight'      => 768,
