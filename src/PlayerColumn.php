@@ -61,6 +61,7 @@ SCRIPT;
             $width = Arr::get($options, 'videoWidth');
             $width_total = $width + 32;
             $height = Arr::get($options, 'videoHeight');
+            $poster = Arr::get($options, 'poster');
 
             return <<<HTML
 <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#video-modal-{$this->getKey()}">
@@ -74,7 +75,7 @@ SCRIPT;
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <video src="$url" width="{$width}" height="{$height}"></video>
+        <video src="$url" width="{$width}" height="{$height}" poster="{$poster}"></video>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
