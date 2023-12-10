@@ -20,15 +20,15 @@ class MediaPlayerServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/laravel-admin-ext/media-player')],
-                'laravel-admin-media-player'
+                [$assets => public_path('vendor/open-admin-ext/media-player')],
+                'open-admin-media-player'
             );
         }
 
         Admin::booting(function () {
 
-            Admin::js('vendor/laravel-admin-ext/media-player/build/mediaelement-and-player.min.js');
-            Admin::css('vendor/laravel-admin-ext/media-player/build/mediaelementplayer.min.css');
+            Admin::js('vendor/open-admin-ext/media-player/build/mediaelement-and-player.min.js');
+            Admin::css('vendor/open-admin-ext/media-player/build/mediaelementplayer.min.css');
 
             Field::macro('video', PlayerField::video());
             Field::macro('audio', PlayerField::audio());
