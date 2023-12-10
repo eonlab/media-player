@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\MediaPlayer;
+namespace OpenAdmin\Admin\MediaPlayer;
 
-use Encore\Admin\Extension;
+use OpenAdmin\Admin\Extension;
 use Illuminate\Support\Facades\Storage;
 
 class MediaPlayer extends Extension
