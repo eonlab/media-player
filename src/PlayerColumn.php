@@ -64,7 +64,7 @@ SCRIPT;
 
             return <<<HTML
 <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#video-modal-{$this->getKey()}">
-    <i class="fa fa-play"></i> Play
+    <i class="icon-play"></i><span class="hidden-xs"> Play</span>
 </a>
 <div class="modal" id="video-modal-{$this->getKey()}" tabindex="-1">
   <div class="modal-dialog">
