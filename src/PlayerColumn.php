@@ -23,7 +23,7 @@ class PlayerColumn
         $locale = config('app.locale');
 
         $script = <<<SCRIPT
-            
+
 mejs.i18n.language('$locale');
 
 var config = $config;
@@ -34,7 +34,7 @@ config.success = function (player, node) {
 $('video, audio').mediaelementplayer(config);
 
 $('.modal').on('hidden.bs.modal', function () {
-    
+
     var playerId = $(this).find('.mejs__container').attr('id');
     var player = mejs.players[playerId];
     if (!player.paused) {
@@ -59,24 +59,25 @@ SCRIPT;
             $url = MediaPlayer::getValidUrl($value,  Arr::get($options, 'server'));
 
             $width = Arr::get($options, 'videoWidth');
+            $width_total = $width + 32;
             $height = Arr::get($options, 'videoHeight');
 
             return <<<HTML
-<a class="btn btn-app grid-open-map" data-toggle="modal" data-target="#video-modal-{$this->getKey()}">
+<a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#video-modal-{$this->getKey()}">
     <i class="fa fa-play"></i> Play
 </a>
-            
 <div class="modal" id="video-modal-{$this->getKey()}" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+  <div class="modal-dialog">
+    <div class="modal-content" style="width:{$width_total}px;">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">
-          <span>×</span>
-          </button>
-          <h4 class="modal-title">Play</h4>
+        <h5 class="modal-title">Play</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <video src="$url" width="{$width}" height="{$height}"></video>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
