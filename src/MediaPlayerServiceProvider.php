@@ -1,10 +1,10 @@
 <?php
 
-namespace Encore\Admin\MediaPlayer;
+namespace OpenAdmin\Admin\MediaPlayer;
 
-use Encore\Admin\Admin;
-use Encore\Admin\Grid\Column;
-use Encore\Admin\Show\Field;
+use OpenAdmin\Admin\Admin;
+use OpenAdmin\Admin\Grid\Column;
+use OpenAdmin\Admin\Show\Field;
 use Illuminate\Support\ServiceProvider;
 
 class MediaPlayerServiceProvider extends ServiceProvider
