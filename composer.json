@@ -20,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "OpenAdmin\\Admin\\MediaPlayer\\": "src/"
+            "OpenAdmin\\MediaPlayer\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "OpenAdmin\\Admin\\MediaPlayer\\MediaPlayerServiceProvider"
+                "OpenAdmin\\MediaPlayer\\MediaPlayerServiceProvider"
             ]
         }
     }
